@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="row">
+    <div class="nine columns", style="text-align: center">
+        <img src="{{url_for('static', filename='images/nothing-to-do-here.png')}}">
+        <h2>Error 404: Page was not found.</h2>
+    </div>
+    <div class="three columns">
+        <h5>Menu bar</h5>
+        <h6>Last Content</h6>
+        <ul>
+            {% for post in top5: %}
+            <li><a href="">{{post[0]}}</a></li>
+            {% endfor %}
+        </ul>
+        <h6>Categories</h6>
+        <ul>
+            {% for i in menu: %}
+            <li><a href="/">{{i}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

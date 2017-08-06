@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="row">
+    <div class="nine columns", style="text-align: justify">
+        <h3>Lorem ipsum</h3>
+<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id mauris a quam aliquet finibus. Suspendisse nec hendrerit nibh, sit amet interdum nunc. Cras feugiat felis facilisis vehicula pharetra. Suspendisse nisi felis, bibendum eget leo non, consectetur finibus erat. Donec sed turpis sed elit sollicitudin egestas. Aenean laoreet vulputate metus, non malesuada risus facilisis sed. Etiam et lacus velit. Curabitur sem sapien, dictum dapibus ligula porta, congue cursus mauris. Cras ac mi auctor, pretium nulla non, hendrerit libero. Vestibulum commodo dapibus cursus. Maecenas convallis odio risus, nec auctor nulla accumsan ut. Donec in ullamcorper tellus. Maecenas non est et risus finibus tincidunt. Aliquam erat volutpat. Aenean venenatis, purus sed elementum ullamcorper, dui diam mattis odio, eget auctor metus neque vehicula velit.
+</p>
+
+<p>Donec erat lacus, consequat quis mattis et, tempus eu ante. Donec eget sem at nulla mollis tempor a a ante. Sed quam lectus, ultrices eget hendrerit id, elementum ut risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aliquam dapibus ante sit amet sem porttitor sodales. In lobortis lorem at condimentum consequat. In vestibulum dolor porta ultrices aliquet. Mauris odio leo, convallis nec odio at, dignissim accumsan ante. Vivamus vitae nisl vitae arcu mollis fringilla. Phasellus commodo consectetur ligula, at porttitor mi blandit et. Praesent et arcu at metus scelerisque viverra id vel odio. Nullam eleifend velit metus, ultricies suscipit diam sodales imperdiet. </p>
+
+<h5>Proin laoreet turpis eget mi suscipit pretium.</h5>
+<p>Aliquam aliquet quis velit sit amet posuere. Donec maximus nibh tellus, vulputate efficitur nibh commodo vel. Pellentesque pretium lacus orci, in blandit nibh gravida in. Ut nec tellus a ligula luctus malesuada. Nullam lacus quam, scelerisque at libero at, pellentesque gravida magna. Cras molestie suscipit scelerisque. Etiam rhoncus sodales tellus ut feugiat. Donec tincidunt suscipit aliquet. Aenean in sagittis orci, at feugiat massa. Etiam felis ante, lacinia et gravida vel, maximus id elit. Curabitur hendrerit, sapien tristique porta condimentum, risus lacus aliquam mauris, et tempor nisi massa laoreet ipsum. </p>
+    </div>
+    <div class="three columns">
+        <h5>Menu bar</h5>
+        <h6>Last Content</h6>
+        <ul>
+            {% for post in top5: %}
+            <li><a href="">{{post[0]}}</a></li>
+            {% endfor %}
+        </ul>
+        <h6>Categories</h6>
+        <ul>
+            {% for i in menu: %}
+            <li><a href="/">{{i}}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
