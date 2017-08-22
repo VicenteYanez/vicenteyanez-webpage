@@ -4,13 +4,16 @@ from datetime import date
 
 class Content():
     content_dict = {"Data Analysis":
-                    [["Heath and Earthquakes", "heath-earthquakes"],
+                    [["Heath and Earthquakes", "weather-earthquakes"],
                      ["Stress on Volcanos: Villarica", "stress-villarica"]],
                     "Geology":
                     [["The History of Concepcion", "concepcion-history"],
                      ["The History of Toronto", "toronto-history"]],
                     "Education":
                     [["How to make boring thing fun", "boring-things-fun"]]}
+
+    projects_list = [["GFA: GNSS Field Analysis",
+                      "https://github.com/VicenteYanez/GFA"]]
 
     def top5():
         """

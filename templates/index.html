@@ -1,21 +1,21 @@
 {% extends "base.html" %}
 
 {% block body %}
-<div class="row", style="text-align:center">
+<div class="row">
     <div class="four columns">
-        <img class="u-max-full-width" src="{{url_for('static', filename='images/mapa.jpg')}}">
-        <h5><a class="button" href="/blog">Blog</a></h5>
-        I write about a lot of stuff in English and Spanish. Here you can find different analysis with no background requiere.
+        <img class="u-max-full-width" style="border:1px solid black" src="{{url_for('static', filename='images/blog.png')}}">
+        <h5 style="text-align:center"><a class="button" href="/blog">Blog</a></h5>
+        <p style="text-align:justify">I write about a lot of stuff in English and Spanish. Here you can find different analysis with no background requiere.</p>
     </div>
     <div class="four columns">
-        <img class="u-max-full-width" src="{{url_for('static', filename='images/graph.png')}}">
-        <h5><a class="button" href="">Projects</a></h5>
-        Here are my cool projects.
+        <img class="u-max-full-width" style="border:1px solid black" src="{{url_for('static', filename='images/graph.png')}}">
+        <h5 style="text-align:center"><a class="button" href="/projects">Projects</a></h5>
+        <p style="text-align:justify">Here are my cool projects. Right now my only project is GNSS Field Analysis (GFA)</p>
     </div>
     <div class="four columns">
-        <img class="u-max-full-width" src="{{url_for('static', filename='images/db.jpeg')}}">
-        <h5><a class="button" href="">Data</a></h5>
-        I like to be as open as posible with all my work. If I can, here you are going to find different datasets totally free.
+        <img class="u-max-full-width" style="border:1px solid black" src="{{url_for('static', filename='images/internet.png')}}">
+        <h5 style="text-align:center"><a class="button" href="/data">Data</a></h5>
+        <p style="text-align:justify">I like to be as open as posible with all my work. If I can, here you are going to find different datasets totally free. The site is in construction, so right now I don’t have any data. When I start to write posts in the blog, I will start to share some data.</p>
     </div>
 </div>
 
