@@ -30,10 +30,21 @@ def homepage():
 def projects():
     return render_template("projects.html", projects=Content.projects_list)
 
+
 @app.route('/blog/')
 def blog_content(content=None):
     return render_template("content.html", menu=Content.content_dict,
                            top5=Content.top5(), content=content)
+
+
+@app.route('/aboutme')
+def aboutme():
+    return render_template("aboutme.html")
+
+
+@app.route('/data')
+def data():
+    return render_template("data.html")
 
 
 # blog posts

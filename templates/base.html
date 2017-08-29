@@ -7,7 +7,7 @@
   <meta charset="utf-8">
   <title>Vicente Yanez personal webpage</title>
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="author" content="Vicente Yañez Cuadra">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -25,66 +25,70 @@
 
 </head>
 <body>
-
     <!-- Primary Page Layout
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    {% if request.path == '/': %}
     <div class="container">
         <div class="row">
             <section class="header">
               <div class="five columns"><h1>Blind Geologist</h1></div>
               <div class="seven columns">
-                  <p>Welcome to my website, I am a young chilean geologist and here you are going to find geospatial data analysis, tutorials, geology stuff and a lot of python code. If you would like to know more things about me, you can find it here. From where I am, where I have worked and what I am doing right know. <a href="">Know more about me</a></p>
+                  <p>Welcome to my website, I am a young chilean geologist and here you are going to find geospatial data analysis, tutorials, geology stuff and a lot of python code. If you would like to know more things about me, you can find it here. From where I am, where I have worked and what I am doing right know. <a href="/aboutme">Know more about me</a></p>
               </div>
             </section>
         </div>
-        {% if request.path != '/': %}
-        <!-- Navegation Bar -->
-        <div class="row" style="text-align: center">
-            <div class="three columns"><a class="button" href="/blog">Blog</a></div>
-            <div class="three columns"><a class="button" href="/projects">Projects</a></div>
-            <div class="three columns"><a class="button" href="/data">Data</a></div>
-            <div class="three columns"><a class="button" href="/about">About Me</a></div>
-        </div>
-        {% endif %}
     </div>
-
-    <!-- Content -->
+    {% endif %}
+    {% if request.path != '/': %}
+    <!-- Navegation Bar -->
     <div class="container">
+        <div class="row">
+            <section class="header" style="text-align: center">
+                <div class="two columns"><h5>Blind Geologist</h5></div>
+                <div class="two columns"><a class="button" href="/">Home</a></div>
+                <div class="two columns"><a class="button" href="/blog">Blog</a></div>
+                <div class="two columns"><a class="button" href="/projects">Projects</a></div>
+                <div class="two columns"><a class="button" href="/data">Data</a></div>
+                <div class="two columns"><a class="button" href="/aboutme">About Me</a></div>
+            </section>
+        </div>
+    </div>
+    {% endif %}
+    <!-- Content -->
+    <div class="container" style="min-height:100%">
         {% block body %} {% endblock %}
     </div>
-    <!-- Footer  -->
-    <div class="container">
-        <div class="footer">
-            <div class="row">
-                <div class="twelve columns">
-                    <h4>End of page... But wait! There is more</h4>
-                </div>
-            </div>
-            <div class="row">
-              <div class="four columns">
-                <h5>Contact Me</h5>
-                <ul>
-                    <li>vicenteyanez@protonmail.com</li>
-                    <li><a href="https://twitter.com/Exepal">Twitter</a></li>
-                    <li><a href="https://www.linkedin.com/in/vicente-y%C3%A1%C3%B1ez-64145b127/">Linkedin</a></li>
-                </ul>
-              </div>
-              <div class="four columns">
-                  <h5>Fun links</h5>
-                  <ul>
-                      <li><a href="">Something interestin</a></li>
-                      <li><a href="">Something more interesting</a></li>
-                  </ul>
-              </div>
-              <div class="four columns">
-                  <h5>Licence</h5>
-                  <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-              </div>
-            </div>
+</body>
+
+<!-- Footer  -->
+<div class="footer">
+    <div class="row">
+        <div class="twelve columns">
+            <h4>End of page... But wait! There is more</h4>
         </div>
     </div>
+    <div class="row">
+      <div class="four columns">
+        <h5>Contact Me</h5>
+        <ul>
+            <li>vicenteyanez@protonmail.com</li>
+            <li><a href="https://twitter.com/Exepal">Twitter</a></li>
+            <li><a href="https://www.linkedin.com/in/vicente-y%C3%A1%C3%B1ez-64145b127/">Linkedin</a></li>
+        </ul>
+      </div>
+      <div class="four columns">
+          <h5>Fun links</h5>
+          <ul>
+              <li><a href="http://www2.udec.cl/geologia/">Geology, Universidad de Concepción</a></li>
+          </ul>
+      </div>
+      <div class="four columns">
+          <h5>Licence</h5>
+          <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </div>
+    </div>
+</div>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
 </html>

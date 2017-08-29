@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block body %}
+<h3>About me</h3>
+<div class="row">
+    <div class="four columns">
+        <img class="u-max-full-width" src="{{url_for('static', filename='images/me.jpg')}}">
+    </div>
+    <div class="eight columns">
+        <p>My name is Vicente and I am from Chile. I have a bachelor's degree of Geology in Universidad de Concepción the year 2016. Although I am more interested in geospatial, geophysical and geological data analysis than in classical geology (mapping, field job and stuff like that).</p>
+        <p> If you have a project where I can participate, these are some of the thing that I can do: gather and clean geospatial data, modelate, visualize and interpret them. Also, even though I am not a professional programmer I’m very good with python so if you need to solve a problem with code, I am your man.</p>
+        <p>Also, you could contact me and invite me some beers ;)</p>
+    </div>
+</div>
+<div class="row">
+    <div class="twelve columns">
+        <ul>
+        <h4>Work Experience</h4>
+            <li>Chilean Fondecyt 1151175 Active Tectonics and Volcanism at the Southern Andes. 2016
+                <ul style="list-style-type:square"><li>Technical assistant, worked programming and modeling GNSS data.</li></ul>
+            </li>
+            <li>Internship in Centro Sismologico Nacional. Santiago, Chile. Summer 2016.
+                <ul style="list-style-type:square"><li>Programming and modeling of GNSS data.</li></ul>
+            </li>
+            <li>Internship in SGS CIMM T&S S.A. Santiago, Chile. Summer 2014.
+                <ul style="list-style-type:square"><li>Worked doing laboratory tests of rock mechanics.</li></ul>
+            </li>
+        <h4>Congress</h4>
+            <li>Garcia, F.; Tassara, A.; <b>Yañez, V.</b> 2017. Current crustal deformation in the Southern Andes: Is there a connection with the latest volcanic eruptions? European Geosciences Union General Assembly 2017. Vienna</li>
+            <li><b>Yáñez, V.</b>; Bataille, K.; García, F.; Tassara, A. 2016. Análisis De La Vorticidad Cortical En La Zona De Falla De Liquiñe-Ofqui. Primer Simposio De Tectónica Sudamericana. Santiago de Chile.</li>
+            <li>García, F.; Tassara, A.; <b>Yáñez, V</b>. 2016. Deformación Actual En Los Andes Del Sur: Existe Alguna Conección Con Las Últimas Erupciones Volcánicas?. Primer Simposio De Tectónica Sudamericana. Santiago de Chile.</li>
+            <li> Tassara, A.; Giorgis, S.; <b>Yáñez, V.</b>; Garcia, F.; Baez, J.C. y Lara, L. 2016. Volcanism and tectonics in action along the Southern Andes: space-time analysis of current deformation recorded by GNSS and seismicity. European Geosciences Union General Assembly 2016. Vienna.</li>
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
