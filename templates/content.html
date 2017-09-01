@@ -4,6 +4,7 @@
 
 <div class="row">
     <div class="nine columns", style="text-align: justify">
+{% if request.path == '/blog/': %}
         <h3>What can I find here?</h3>
 <p><b>Hello readers</b>. First of all, I have to say that my English isn't perfect, so I am sorry if you read any misspell or grammatical error. Nonetheless, I will try to decrease them with all my strength.</p>
 
@@ -14,20 +15,29 @@
 <p> I use (most of all) my own tools for the blog posts. So if you want to check the code or use it yourself, I have a section with a list of my own projects. Right now my only project is <a href="https://github.com/VicenteYanez/GFA">GNSS Field Analysis (GFA)</a>, but when the blog gets bigger and GFA becomes more usable, I will start other projects.</p>
 
 <p>Finally, in some posts I also share the data (if it is public), which I used in them.<b>You can download them in the Data section</b>.</p>
-
+{% elif category.title().replace('-', ' ') in menu: %}
+<h3>{{category.title().replace('-', ' ')}} Posts</h3>
+<ul>
+{% for post in menu[category.title().replace('-', ' ')]: %}
+<li><a href="/blog/{{post[1]}}">{{post[0]}}</a></li>
+{% endfor%}
+</ul>
+{% else: %}
+{{content}}
+{% endif %}
     </div>
     <div class="three columns">
         <h5>Menu bar</h5>
         <h6>Last Content</h6>
         <ul>
             {% for post in top5: %}
-            <li><a href="">{{post[0]}}</a></li>
+            <li><a href="/blog/{{post[1]}}">{{post[0]}}</a> {{post[2].strftime('%d-%b-%Y')}}</li>
             {% endfor %}
         </ul>
         <h6>Categories</h6>
         <ul>
             {% for i in menu: %}
-            <li><a href="/">{{i}}</a></li>
+            <li><a href="/blog/categories/{{i.replace(' ', '-').lower()}}">{{i}}</a></li>
             {% endfor %}
         </ul>
     </div>
