@@ -2,8 +2,9 @@
 # A very simple Flask Hello World app for you to get started with...
 
 from flask import Flask, render_template, Markup
-
 from content_management import Content
+
+import numpy as np
 
 app = Flask(__name__)
 
@@ -48,6 +49,7 @@ def page_not_found(e):
 @app.route('/blog/weather-earthquakes/')
 def weather_earthquakes(category='empty'):
     template = "content/weather-earthquakes/weather-earthquakes.html"
+    # table = np.loadtxt('content/weather-earthquakes/code/corr_coef.txt', fmt='%s', delimiter=';')
     content_file = open(template, 'r')
     content = Markup(content_file.read())
     content_file.close()

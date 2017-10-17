@@ -7,6 +7,9 @@
     min-width: 100%;
     background-color: #333;
     color: white;
-    bottom: 0;
+    bottom: -10%;
     position: absolute;
-    height: 250px;}
+    min-height: 250px;}
+.secondline {
+  font-size: 1.2rem;
+  font-style: oblique;}
