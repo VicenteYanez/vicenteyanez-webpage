@@ -1,6 +1,8 @@
 
 # A very simple Flask Hello World app for you to get started with...
 
+import os
+
 from flask import Flask, render_template, Markup
 from content_management import Content
 
@@ -48,7 +50,8 @@ def page_not_found(e):
 # blog posts
 @app.route('/blog/building-the-blog-1/')
 def weather_earthquakes(category='empty'):
-    template = "./content/weather-earthquakes/weather-earthquakes.html"
+    localdir = os.getcwd()
+    template = "{}/content/weather-earthquakes/weather-earthquakes.html".format(localdir)
     # table = np.loadtxt('content/weather-earthquakes/code/corr_coef.txt', fmt='%s', delimiter=';')
     content_file = open(template, 'r')
     content = Markup(content_file.read())
