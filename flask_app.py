@@ -46,7 +46,7 @@ def page_not_found(e):
 
 
 # blog posts
-@app.route('/blog/weather-earthquakes/')
+@app.route('/blog/building-the-blog-1/')
 def weather_earthquakes(category='empty'):
     template = "content/weather-earthquakes/weather-earthquakes.html"
     # table = np.loadtxt('content/weather-earthquakes/code/corr_coef.txt', fmt='%s', delimiter=';')

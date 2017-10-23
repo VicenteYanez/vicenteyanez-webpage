@@ -6,9 +6,9 @@ from operator import itemgetter
 class Content():
     def __init__(self):
         self.content_dict = {"Data Analysis":
-                             [["Weather and Earthquakes",
-                               "weather-earthquakes",
-                               date(2017, 8, 31)]],
+                             [["Building the blog part I(spanish only)",
+                               "building-the-blog-1",
+                               date(2017, 10, 23)]],
                              "Education": [],
                              "Geology": []}
 

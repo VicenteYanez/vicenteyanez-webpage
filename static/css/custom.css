@@ -11,5 +11,8 @@
     position: absolute;
     min-height: 250px;}
 .secondline {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-style: oblique;}
+.post {
+  font-size: 1.6rem;
+}
