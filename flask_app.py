@@ -51,7 +51,7 @@ def page_not_found(e):
 @app.route('/blog/building-the-blog-1/')
 def weather_earthquakes(category='empty'):
     localdir = os.getcwd()
-    template = "{}/content/weather-earthquakes/weather-earthquakes.html".format(localdir)
+    template = "{}/mysite/content/weather-earthquakes/weather-earthquakes.html".format(localdir)
     # table = np.loadtxt('content/weather-earthquakes/code/corr_coef.txt', fmt='%s', delimiter=';')
     content_file = open(template, 'r')
     content = Markup(content_file.read())
