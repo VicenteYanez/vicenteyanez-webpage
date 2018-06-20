@@ -129,9 +129,10 @@ body {
   line-height: 1.6;
   font-weight: 400;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
-
-
+  color: #222;  /* original color: #222*/
+  background: #F7F7F7;
+}
+		     
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 h1, h2, h3, h4, h5, h6 {
@@ -315,7 +316,7 @@ code {
   margin: 0 .2rem;
   font-size: 90%;
   white-space: nowrap;
-  background: #F1F1F1;
+  background: #F7F7F7;
   border: 1px solid #E1E1E1;
   border-radius: 4px; }
 pre > code {

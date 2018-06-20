@@ -1,0 +1,90 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/TeX Live for SUSE Linux) (preloaded format=latex 2016.11.15)  1 SEP 2017 18:00
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**weather-earthquakes.tex
+(./weather-earthquakes.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 79 languages loaded.
+(/usr/share/texmf/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texmf/tex/latex/base/size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count79
+\c@section=\count80
+\c@subsection=\count81
+\c@subsubsection=\count82
+\c@paragraph=\count83
+\c@subparagraph=\count84
+\c@figure=\count85
+\c@table=\count86
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/usr/share/texmf/tex/generic/babel/babel.sty
+Package: babel 2015/08/03 3.9m The Babel package
+
+(/usr/share/texmf/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2014/04/24 v5.0n Spanish support from the babel system
+
+(/usr/share/texmf/tex/generic/babel/babel.def
+File: babel.def 2015/08/03 3.9m Babel common definitions
+\babel@savecnt=\count87
+\U@D=\dimen103
+)
+\es@quottoks=\toks14
+\es@quotdepth=\count88
+Package babel Info: Making " an active character on input line 516.
+Package babel Info: Making . an active character on input line 617.
+Package babel Info: Making < an active character on input line 662.
+Package babel Info: Making > an active character on input line 662.
+))
+(/usr/share/texmf/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+
+(/usr/share/texmf/tex/latex/base/latin1.def
+File: latin1.def 2015/03/17 v1.2c Input encoding file
+))
+No file weather-earthquakes.aux.
+\openout1 = `weather-earthquakes.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 6.
+LaTeX Font Info:    ... okay on input line 6.
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 7.
+[1
+
+] (./weather-earthquakes.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+) ) 
+Here is how much of TeX's memory you used:
+ 1063 strings out of 493092
+ 13150 string characters out of 6143017
+ 72500 words of memory out of 5000000
+ 4611 multiletter control sequences out of 15000+600000
+ 6675 words of font info for 24 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 27i,6n,30p,191b,384s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+Output written on weather-earthquakes.dvi (1 page, 452 bytes).

@@ -1,21 +1,48 @@
 {% extends "base.html" %}
 
 {% block body %}
+<hr>
 <div class="row">
     <div class="four columns">
-        <img class="u-max-full-width" src="{{url_for('static', filename='images/blog.png')}}">
-        <h5 style="text-align:center"><a class="button" href="/blog">Blog</a></h5>
-        <p style="text-align:justify">I write about a lot of stuff in English and Spanish. Here you can find different analysis with no background requiere.</p>
+       <!--<center><img class="circular_image" src="{{url_for('static', filename='images/xblog.png')}}"></center> -->
+        <h5 style="text-align:center">Posts</h5>
+        <p style="text-align:justify">I write about a lot of stuff in English and Spanish. Here you can find different analysis explainded in a simple way.</p>
+	<ul>
+          {% for post in posts: %}
+          <li><a href="/content/{{post[1]}}">{{post[0]}}</a></li>
+          {% endfor %}
+        </ul>
     </div>
     <div class="four columns">
-        <img class="u-max-full-width" src="{{url_for('static', filename='images/graph.png')}}">
-        <h5 style="text-align:center"><a class="button" href="/projects">Projects</a></h5>
-        <p style="text-align:justify">Here are my cool projects. Right now my only project is GNSS Field Analysis (GFA)</p>
+        <!--<center><img class="circular_image" src="{{url_for('static', filename='images/xgraph.png')}}"></center>-->
+        <h5 style="text-align:center">Projects</h5>
+        <p style="text-align:justify">Here you can find a link to my gitlab projects.</p>
+	<ul>
+	  <li><a href="https://gitlab.com/vicenteyanez/GFA">GNSS Field Analysis (GFA)</a> - Python tools for the geospatial analysis of a velocity field, using Davis & Titus (2011) and Bevis & Brown (2014) papers</li>
+	  <li><a href="https://gitlab.com/vicenteyanez/gravity_won_bevis_1987">Won and Bevis (1987) python implementation</a> - Code is based in the Won and Bevis (1988) gravity solution for a 2 dimensional body</li>
+        </ul>
     </div>
     <div class="four columns">
-        <img class="u-max-full-width" src="{{url_for('static', filename='images/construction.jpg')}}">
-        <h5 style="text-align:center"><a class="button" href="/data">Data</a></h5>
-        <p style="text-align:justify">I like to be as open as posible with all my work. If I can, here you are going to find different datasets totally free. The site is in construction, so right now I don’t have any data. When I start to write posts in the blog, I will start to share some data.</p>
+     <!-- <center><img class="circular_image" src="{{url_for('static', filename='images/xmap.jpg')}}"></center>-->
+      <h5 style="text-align:center">Maps</h5>
+      <p style="text-align:justify"></p>
+      <ul>
+	{% for map in maps: %}
+	<li><a href="/maps/{{map[1]}}">{{map[0]}}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="twelve columns">
+        <ul>
+        <h4>Presentations in Geosciences Conferences</h4>
+            <li>Garcia, F.; Tassara, A.; <b>Yañez, V.</b> 2017. Current crustal deformation in the Southern Andes: Is there a connection with the latest volcanic eruptions? European Geosciences Union General Assembly 2017. Vienna</li>
+            <li><b>Yáñez, V.</b>; Bataille, K.; García, F.; Tassara, A. 2016. Análisis De La Vorticidad Cortical En La Zona De Falla De Liquiñe-Ofqui. Primer Simposio De Tectónica Sudamericana. Santiago de Chile.</li>
+            <li>García, F.; Tassara, A.; <b>Yáñez, V</b>. 2016. Deformación Actual En Los Andes Del Sur: Existe Alguna Conección Con Las Últimas Erupciones Volcánicas?. Primer Simposio De Tectónica Sudamericana. Santiago de Chile.</li>
+            <li> Tassara, A.; Giorgis, S.; <b>Yáñez, V.</b>; Garcia, F.; Baez, J.C. y Lara, L. 2016. Volcanism and tectonics in action along the Southern Andes: space-time analysis of current deformation recorded by GNSS and seismicity. European Geosciences Union General Assembly 2016. Vienna.</li>
+        </ul>
     </div>
 </div>
 

@@ -11,23 +11,43 @@ class Content():
                                date(2017, 10, 23)]],
                              "Education": [],
                              "Geology": []}
-
-        self.projects_list = [["GFA: GNSS Field Analysis",
-                               "https://github.com/VicenteYanez/GFA"]]
-
-    def top5(self):
+        self.map_dict = {"Data Analysis": [],
+                         "Education": [["Constitución-Malargue",
+                                       "mapa-constitucion-malargue",
+                                        date(2014, 11, 1)]],
+                         "Geology": [["Mapa Geológico Andes del Sur",
+                                      "mapa-geologico-andes",
+                                      date(2016, 10, 1)]]
+                         }
+        
+    def lists(self):
         """
-        Method that calculates the last 5 post
+        Method a list with the posts
         """
+        # lists with the posts in every tag
         tagdata = self.content_dict['Data Analysis']
         tagedu = self.content_dict['Education']
+        taggeo = self.content_dict['Geology']
         # add any other tag in the dictionaty !!!!!!!!!!!!!!!!!!!!
 
-        allcontent = tagdata + tagedu
-
+        # sum all the post in one list and sorted by date
+        allcontent = tagdata + tagedu + taggeo
         sortedcontent = sorted(allcontent, key=itemgetter(2), reverse=True)
+        
+        return sortedcontent
 
-        return sortedcontent[:5]
+    def maps(self):
+        """
+        Method that return list with the maps
+        """
+        # lists with the posts in every tag
+        tagdata = self.map_dict['Data Analysis']
+        tagedu = self.map_dict['Education']
+        taggeo = self.map_dict['Geology']
+        # add any other tag in the dictionaty !!!!!!!!!!!!!!!!!!!!
 
-    def load_dates(self):
-        return
+        # sum all the post in one list and sorted by date
+        allcontent = tagdata + tagedu + taggeo
+        maplist = sorted(allcontent, key=itemgetter(2), reverse=True)
+
+        return maplist

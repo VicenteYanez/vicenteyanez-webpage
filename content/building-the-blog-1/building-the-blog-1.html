@@ -1,0 +1,28 @@
+
+
+
+<h2>Construyendo el Blog Parte I: Gráficos con Python</h2>
+<div class='secondline'><p><b>23 de Octubre, 2017</b>.- Bienvenido mi estimado lector. Como forma de inaugurar el blog escribiré una serie de entradas contando cuales son y como funcionan las herramientas principales que utilizare aquí. Además para hacer más amena la lectura cada entrada va a contener un sencillo ejemplo de su uso. Si te interesa ver ejemplos de como usar Python este es tu lugar.</p></div>
+ <!-- Introduction -->
+ <div class='post'>
+ <p>Para mí, en el mundo de visualizar data lo más sencillo son los gráficos. Pueden ser gráficos de series de tiempo, histogramas, barras, etc. Luego, ya un poco más difícil de construir son los mapas aunque afortunadamente hoy con las herramientas GIS los problemas de proyección cartográfica suelen tener una rápida implementación. Luego, están las figuras 3D, porque además de tener las dificultades de los mapas como la proyección, hay que sumarle la perspectiva y que usualmente requieren un computador con un buen procesador. Finalmente, lejos para mi lo más difícil son los dibujos. Soy pésimo en eso..</p>
+<a href="/static/images/content/1-weather-earthquakes/examples.png">
+  <img class="u-max-full-width" src="/static/images/content/1-weather-earthquakes/examples.png">
+</a>
+<div class='secondline'>a. Gráfico de presión y temperatura de la evolución del metamórfismo de los gneisses La Pampa(Álvarez et al., 2013). b. Visualización topográfica del altiplano(Allmendinger et al., 1997). c. Visualización 3D de la topografía del sector Norte de la Cordillera de Nahuelbuta, al Sur del río Bíobío. </div>
+<!-- Cuerpo principal -->
+<p>Es por esto que las herramientas serán presentadas en ese orden. Hoy parto con los gráficos y terminare con una figura 3D (no pienso dibujar nada).</p>
+<p>El origen de los datos es otro tema. Afortunadamente hoy en día en las geociencias hay suficiente data gratuita en Internet como para alimentar este humilde blog. En general tengo pensado usar raster topográficos, sismicidad, series de tiempo GPS y datos meteorológicos. Aunque también tengo set de datos geológicos, por el momento no tengo muy claro como puedo usarlos de forma novedosa en el blog.</p>
+<p>Después de esta larga introducción, les presento el contenido del día de hoy. Primero para obtener los datos escribí un <a href="https://github.com/VicenteYanez/vicenteyanez-webpage/blob/master/content/weather-earthquakes/code/dirmeteo.py">sencillo webscrapper</a> para bajar las temperaturas diarias de la dirección meteorológica de Chile. Luego hice otro <a href="https://github.com/VicenteYanez/vicenteyanez-webpage/blob/master/content/weather-earthquakes/code/analysis.py">script</a> de python para plotear series de tiempo al estilo de fivethirtyeight.com, que además, con pequeñas modificaciones me va a servir para entradas posteriores.</p>
+<p>Sin más preámbulo, el ejemplo del día de hoy tiene que ver con terremoto 8.8 Mw denominado Terremoto del Maule, que ocurrió en Chile el año 2010. Durante ese tiempo era común escuchar que en los días que hacía más calor, habían más terremotos. Como hasta ahora no hay evidencia que pueda linkear los dos fenómenos y siendo algo sencillo de desmentir se me ocurrió que podía ser un buen punto de partida. El gráfico muestra la cantidad de sismos diarios cerca de Concepción () desde el 2005 al 2015.  El peak más alto corresponde al terremoto del Maule y sus réplicas. Abajo, las temperaturas medias diarias en Concepción medidas en el Aeropuerto Carriel Sur. Aunque a simple vista no hay nada que pueda indicar algún nexo entre ambos fenómenos, se puede calcular el índice de correlación (https://es.wikipedia.org/wiki/Coeficiente_de_correlaci%C3%B3n_de_Pearson) entre ambas variables, con un resultado de 0.000994 donde 0 es sin correlación, y -1 o 1 indica full correlación.</p>
+<!-- graph with the sismicity and temperatures -->
+<a href="/static/images/content/1-weather-earthquakes/graph.png">
+  <img class="u-max-full-width" src="/static/images/content/1-weather-earthquakes/graph.png">
+</a>
+<br><br>
+<h3>Referencias</h3>
+<ul>
+  <li>Allmendinger, R., Jordan, T., Kay, S., Isacks, B. 1997. The Evolution of the Altiplano-Puna Plateau of the Central Andes. Annual Review of Earth and Planetary Sciences. Vol 25. 139–174.</li>
+  <li>Álvarez, J., Mpodozis, C., Blanco-Quintero, I.,García-Casco, A., Arriagada, C., Morata, D. 2013. U–Pb ages and metamorphic evolution of the La Pampa Gneisses: Implications for the evolution of the Chilenia Terrane and Permo-Triassic tectonics of north Central Chile. Journal of South American Earth Sciences. Vol 47. 100–115.</li>
+</ul>
+</div>
