@@ -14,7 +14,7 @@ filepath = os.path.dirname(os.path.realpath(__file__))
 
 @app.route('/')
 def homepage(content=None):
-    return render_template("index2.html", posts=listcontent.lists(), maps=listcontent.maps())
+    return render_template("index.html", posts=listcontent.lists(), maps=listcontent.maps())
 
 
 @app.route('/aboutme/')
