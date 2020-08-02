@@ -14,7 +14,10 @@ class Content():
         self.map_dict = {"Data Analysis": [],
                          "Education": [["Constitución-Malargue",
                                        "mapa-constitucion-malargue",
-                                        date(2014, 11, 1)]],
+                                        date(2014, 11, 1)],
+                                        ["Abanico de las Emociones", 
+                                        "abanico_emociones.png",
+                                        date(2020,8,1)]],
                          "Geology": [["Mapa Geológico Andes del Sur",
                                       "mapa-geologico-andes",
                                       date(2016, 10, 1)]]
