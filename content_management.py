@@ -16,7 +16,7 @@ class Content():
                                        "mapa-constitucion-malargue",
                                         date(2014, 11, 1)],
                                         ["Abanico de las Emociones", 
-                                        "abanico_emociones.png",
+                                        "abanico_emociones",
                                         date(2020,8,1)]],
                          "Geology": [["Mapa Geológico Andes del Sur",
                                       "mapa-geologico-andes",
