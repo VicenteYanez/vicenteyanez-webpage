@@ -17,9 +17,9 @@ def homepage(content=None):
     return render_template("index.html", posts=listcontent.lists(), maps=listcontent.maps())
 
 
-@app.route('/aboutme/')
-def aboutme():
-    return render_template("aboutme.html")
+#@app.route('/aboutme/')
+#def aboutme():
+#    return render_template("aboutme.html")
 
 
 @app.errorhandler(404)
