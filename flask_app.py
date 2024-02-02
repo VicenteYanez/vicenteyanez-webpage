@@ -52,7 +52,7 @@ def show_post(content, post_name):
 
 @app.route('/research')
 def show_research():
-    template = "{}/content/research.html".format(filepath)
+    template = "{}/templates/research.html".format(filepath)
     content_file = open(template, 'r')
     content = Markup(content_file.read())
     content_file.close()
