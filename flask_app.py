@@ -50,6 +50,17 @@ def show_post(content, post_name):
     return render_template("content.html", content=content)
 
 
+@app.route('/research')
+def show_research():
+    template = "{}/content/research.html".format(filepath)
+    content_file = open(template, 'r')
+    content = Markup(content_file.read())
+    content_file.close()
+    
+    return render_template("content.html", content=content)
+
+
+
 if __name__ == "__main__":
     #app.debug = True 
     app.run()
